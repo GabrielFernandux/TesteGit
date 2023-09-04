@@ -34,18 +34,25 @@
     </style>
 </head>
 <body>
-    <h1>Clique no botão e escreva uma mensagem para exibir no quadro abaixo:</h1>
-    <button onclick="inicio()">botão</button>
-    <br><br><br>
-    <section id='resultado'>
-        <p>A mensagem irá aparecer aqui</p>
+    <h1>Antes e Depois</h1>
+    <button onclick="inicio()"> Clique </button>
+    <section id="resultado">
+        <p>
+
+        </p>
+
     </section>
+
     <script>
         function inicio(){
-            let nome = window.prompt ('Qual é o seu nome ?')
-            let res = window.document.getElementById('resultado')
-            res.innerHTML = `<p> Olá, <strong> ${nome} </strong>. É um prazer te conhecer!`
-        }
+       let numero = Number(window.prompt('Informe o valor que deseja!'))
+       let ant =  numero - 1
+       let suc =  numero + 1
+       let res = document.querySelector ('section#resultado')
+       res.innerHTML = `<p> O antecessor de ${numero} é de ${ant}, e o sucessor é de ${suc}` 
+ }
+        
+
     </script>
     
 </body>
